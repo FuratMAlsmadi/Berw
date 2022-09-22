@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="results">
+        <h2>The Best time to drink your coffee is: <span id="drink_hour"></span><span>:</span><span id="drink_minutes"></span></h2>
+        <h3>You can also drink another cup at: <span id="drink_next"></span></h3>
+        <h4>Recommend caffeine intake: <span id="intake"></span></h4>
+        <button id="back">Back</button>
+    </section>
+    <section id="data">
+        <form>
+                <label for="time">Wake up time:</label>
+                <p>
+                    <input type="time" id="time">
+                </p>
+                <label for="Weight">Your Weight:</label>
+                <p>
+                    <input type="number" step="0.01" max="200" min="35" id="weight">
+                </p>
+                <p>
+                    <input type="submit" value="calculate" id="submit">
+                </p>
+        </form>
+    </section>
+    <script src="/index.js"></script>
+</body>
+</html>

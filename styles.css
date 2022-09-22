@@ -1,0 +1,30 @@
+html {
+    width: 100%;
+    height: 100vh;
+    background-color:#6f4e37;
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+}
+
+section {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+
+#submit {
+    background-color: #535353;
+    width: 90px;
+    height: 30px;
+}
+
+#results {
+    display: none;
+}
+
+button {
+    background-color: #535353;
+    width: 90px;
+    height: 30px;
+}
