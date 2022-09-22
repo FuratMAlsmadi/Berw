@@ -16,8 +16,8 @@ document.querySelector('form').onsubmit = function () {
     const weight = document.querySelector('#weight').valueAsNumber;
     const minutes = parseInt(time[3]) * 10 + parseInt(time[4]);
     let meridian = 'PM';
-    function calc_time() {
-        let hour = ((parseInt(time[0]) * 10) + parseInt(time[1]));
+    function calc_time(after) {
+        let hour = ((parseInt(time[0]) * 10) + parseInt(time[1])) + after;
         if (hour > 12) {
             meridian = 'PM';
             return hour;
@@ -32,14 +32,13 @@ document.querySelector('form').onsubmit = function () {
             }
         }
     }
-
     function drink_time() {
         // best time to drink is after 2 hour of waking up from sleep
-        return String((calc_time() + 2)%12) + ':' + String(minutes) + meridian;
+        return String((calc_time(2))%12) + ':' + String(minutes) + meridian;
     }
 
     function next_drink() {
-        let next_time = (calc_time() + 7)%12;
+        let next_time = (calc_time(5))%12;
         return String(next_time) + ':' + String(minutes) + ' ' +meridian;
     }
 
